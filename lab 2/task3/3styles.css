@@ -1,0 +1,187 @@
+body {
+	margin: 0;
+	font-family: Arial;
+	background: #f6f8fa;
+	color: #111;
+}
+
+.wrap {
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 0 16px;
+}
+
+h2 {
+	margin: 28px 0 14px;
+	font-size: 32px;
+}
+
+.hero {
+	background: linear-gradient(#fff, #f6f8fa);
+	text-align: center;
+	padding: 60px 0;
+}
+
+.hero h1 {
+	margin: 0 0 12px;
+	font-size: 48px;
+}
+
+.hero p {
+	margin: 0 auto 18px;
+	max-width: 720px;
+	color: #555;
+}
+
+.grid3 {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 16px;
+}
+
+.card {
+	background: #fff;
+	border: 1px solid #ddd;
+	border-radius: 14px;
+	padding: 16px;
+	box-shadow: 0 4px 14px rgba(0, 0, 0, .06);
+}
+
+.card h3 {
+	margin: 0 0 8px;
+}
+
+.price {
+	display: flex;
+	align-items: baseline;
+	gap: 8px;
+	margin: 8px 0 12px;
+}
+
+.price b {
+	font-size: 38px;
+}
+
+.price span {
+	color: #666;
+	font-size: 14px;
+}
+
+.btn {
+	width: 100%;
+	padding: 10px 12px;
+	border-radius: 10px;
+	border: 1px solid #ccc;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.btn.dark {
+	background: #24292f;
+	color: #fff;
+	border: none;
+}
+
+.btn.light {
+	background: #fff;
+}
+
+.row {
+	display: flex;
+	gap: 10px;
+}
+
+.row .btn {
+	width: 50%;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 10px 0 0;
+}
+
+ul li {
+	padding: 8px 0 8px 18px;
+	border-top: 1px solid #eee;
+	position: relative;
+	font-size: 14px;
+}
+
+ul li::before {
+	content: "✔";
+	position: absolute;
+	left: 0;
+	top: 8px;
+	color: #238636;
+}
+
+.addons {
+	padding-bottom: 60px;
+}
+
+.addon {
+	background: #fff;
+	border: 1px solid #ddd;
+	border-radius: 14px;
+	padding: 14px;
+	display: flex;
+	gap: 12px;
+	box-shadow: 0 4px 14px rgba(0, 0, 0, .06);
+}
+
+.addon p {
+	margin: 6px 0 10px;
+	color: #666;
+	font-size: 14px;
+}
+
+.addon a {
+	text-decoration: none;
+	font-weight: bold;
+	color: #24292f;
+}
+
+.ico {
+	width: 42px;
+	height: 42px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 20px;
+}
+
+.p {
+	background: rgba(130, 80, 223, .15)
+}
+
+.g {
+	background: rgba(45, 164, 78, .15)
+}
+
+.b {
+	background: rgba(9, 105, 218, .15)
+}
+
+.r {
+	background: rgba(215, 58, 74, .12)
+}
+
+.o {
+	background: rgba(209, 76, 8, .12)
+}
+
+.y {
+	background: rgba(191, 135, 0, .15)
+}
+
+@media(max-width:900px) {
+	.grid3 {
+		grid-template-columns: 1fr
+	}
+
+	.hero h1 {
+		font-size: 34px
+	}
+}
