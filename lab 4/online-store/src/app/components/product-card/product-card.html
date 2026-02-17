@@ -1,0 +1,36 @@
+<div class="card">
+
+  <div class="image-container">
+    <img
+      [src]="product.images[currentImageIndex]"
+      alt="{{ product.name }}"
+    />
+
+    <button class="nav left" (click)="prevImage()">‹</button>
+    <button class="nav right" (click)="nextImage()">›</button>
+  </div>
+
+  <h3>{{ product.name }}</h3>
+
+  <p class="description">{{ product.description }}</p>
+
+  <p class="price">{{ product.price | number }} ₸</p>
+
+  <div class="rating">
+    <span *ngFor="let star of getStars()">⭐</span>
+    <span class="numeric">{{ product.rating }}</span>
+  </div>
+
+  <a
+    [href]="product.link"
+    target="_blank"
+    class="buy-button">
+    View on Kaspi
+  </a>
+
+  <div class="share-buttons">
+    <button (click)="shareWhatsApp()">WhatsApp</button>
+    <button (click)="shareTelegram()">Telegram</button>
+  </div>
+
+</div>
