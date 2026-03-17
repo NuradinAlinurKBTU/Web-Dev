@@ -1,10 +1,7 @@
 <div class="card">
 
   <div class="image-container">
-    <img
-      [src]="product.images[currentImageIndex]"
-      alt="{{ product.name }}"
-    />
+    <img [src]="product.images[currentImageIndex]" alt="{{ product.name }}" />
 
     <button class="nav left" (click)="prevImage()">‹</button>
     <button class="nav right" (click)="nextImage()">›</button>
@@ -21,14 +18,15 @@
     <span class="numeric">{{ product.rating }}</span>
   </div>
 
-  <a
-    [href]="product.link"
-    target="_blank"
-    class="buy-button">
+  <p>❤️ Likes: {{ product.likes }}</p>
+
+  <a [href]="product.link" target="_blank" class="buy-button">
     View on Kaspi
   </a>
 
   <div class="share-buttons">
+    <button (click)="like()">Like</button>
+    <button (click)="remove()">Delete</button>
     <button (click)="shareWhatsApp()">WhatsApp</button>
     <button (click)="shareTelegram()">Telegram</button>
   </div>

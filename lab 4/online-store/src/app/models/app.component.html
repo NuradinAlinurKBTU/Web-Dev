@@ -1,0 +1,23 @@
+<div class="layout">
+	<aside class="sidebar">
+		<h2>Categories</h2>
+
+		<div class="cats">
+			<button *ngFor="let c of categories" (click)="selectCategory(c.id)"
+				[class.active]="c.id === selectedCategoryId">
+				{{ c.name }}
+			</button>
+		</div>
+	</aside>
+
+	<main class="content">
+		<ng-container *ngIf="selectedCategoryId; else welcome">
+			<app-product-list [products]="selectedProducts"></app-product-list>
+		</ng-container>
+
+		<ng-template #welcome>
+			<h2>Welcome 👋</h2>
+			<p>Select a category to see products.</p>
+		</ng-template>
+	</main>
+</div>

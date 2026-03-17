@@ -1,0 +1,46 @@
+.layout {
+	display: grid;
+	grid-template-columns: 240px 1fr;
+	gap: 16px;
+	padding: 16px;
+}
+
+.sidebar {
+	border: 1px solid #ddd;
+	border-radius: 12px;
+	padding: 12px;
+}
+
+.cats {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+button {
+	padding: 10px 12px;
+	border-radius: 10px;
+	border: 1px solid #ccc;
+	background: white;
+	cursor: pointer;
+}
+
+button.active {
+	border-color: #000;
+	font-weight: 600;
+}
+
+.content {
+	padding: 4px;
+}
+
+@media (max-width: 900px) {
+	.layout {
+		grid-template-columns: 1fr;
+	}
+
+	.cats {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+}

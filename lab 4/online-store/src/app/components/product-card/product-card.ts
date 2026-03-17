@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Product } from '../../models/product.model';
 
@@ -12,6 +12,7 @@ import { Product } from '../../models/product.model';
 export class ProductCard {
 
   @Input() product!: Product;
+  @Output() delete = new EventEmitter<number>();
 
   currentImageIndex = 0;
 
@@ -28,6 +29,14 @@ export class ProductCard {
 
   getStars(): number[] {
     return Array(Math.floor(this.product.rating)).fill(0);
+  }
+
+  like() {
+    this.product.likes++;
+  }
+
+  remove() {
+    this.delete.emit(this.product.id);
   }
 
   shareWhatsApp() {
