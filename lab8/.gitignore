@@ -1,0 +1,4 @@
+venv/
+__pyrache__/
+*.pyc
+db.sqlite3
