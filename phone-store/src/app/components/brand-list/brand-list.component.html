@@ -1,0 +1,7 @@
+<app-navbar (searchEvent)="filter($event)"></app-navbar>
+
+<div class="phones">
+  @for (phone of phones; track phone.id) {
+    <app-phone-card [phone]="phone"></app-phone-card>
+  }
+</div>
